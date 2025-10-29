@@ -16,6 +16,12 @@
       .hadith {
         font-family: "Amiri Quran", serif;
       }
+      .book-cover {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 192px;
+      }
     </style>
   </head>
   <body class="scroll-smooth">
@@ -57,64 +63,92 @@
       <h2 class="text-3xl font-semibold text-center text-emerald-800 mb-12">مستويات السلسلة التعليمية</h2>
 
       <!-- Level 1 -->
-      <div class="mb-16 text-center">
-        <h3 class="text-2xl font-bold text-emerald-800 mb-8">المستوى الأول: التمهيدي والمبتدئ</h3>
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold text-emerald-800 mb-8 text-center">المستوى الأول: التمهيدي والمبتدئ</h3>
 
         <!-- Container for both boxes -->
-        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-8">
-          <!-- Box 1: First two books -->
+        <div class="space-y-8 max-w-5xl mx-auto mb-8">
+          <!-- Box 1: Grammar Books -->
           <div class="bg-white border-2 border-emerald-100 p-6 rounded-2xl shadow-lg">
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div class="bg-emerald-50 p-4 rounded-2xl shadow text-center">
-                <img src="https://placehold.co/400x550?text=Book+Cover" class="rounded-lg mx-auto mb-3 shadow-md" alt="book" />
-                <h4 class="font-bold text-lg text-emerald-700">فيض رب البرية</h4>
-                <p class="text-gray-700 text-sm">في شرح المقدمة الآجرومية بالشواهد القرآنية</p>
-                <p class="text-gray-700 text-sm">
-                  متن الآجرومية هو من أشهر المتون التعليمية في علم النحو العربي، ويتميّز هذا المتن بصغر حجمه، ووضوح عبارته، وترتيبه المنهجي؛ مما جعله مدخلًا أساسيًا لتعلم النحو وفهم قواعد اللغة العربية. وكتابي «فيض رب البرية في شرح المقدمة الآجرومية بالشواهد القرآنية »، وضعته
-                  لتيسير علم النحو للمبتدئين، فجاء شرحه مبسّطًا، واضحًا، مناسبًا لمن يبدأ طريقه في فهم العربية. وقد جعلت شواهده من القرآن الكريم وحده، ليبقى الدارس موصولًا بكلام الله عزَّ وجلَّ، ويستخرج قواعد العربية من منبعها الصافي، ومصدرها الأسمى، كتاب الله الذي نزل بلسانٍ
-                  عربي مبين.
-                </p>
+            <div class="space-y-6 mb-6">
+              <!-- Book 1: فيض رب البرية -->
+              <div class="flex gap-4 bg-emerald-50 p-4 rounded-xl">
+                <div class="book-cover w-32 flex-shrink-0 rounded-lg shadow-md" style="background-image: url('./assets/01.jpeg')"></div>
+                <div class="flex-1 text-right">
+                  <h4 class="font-bold text-lg text-emerald-700 mb-1">فيض رب البرية</h4>
+                  <p class="text-emerald-600 text-sm font-semibold mb-2">في شرح المقدمة الآجرومية بالشواهد القرآنية</p>
+                  <p class="text-gray-700 text-sm leading-relaxed">
+                    متن الآجرومية هو من أشهر المتون التعليمية في علم النحو العربي، ويتميّز هذا المتن بصغر حجمه، ووضوح عبارته، وترتيبه المنهجي؛ مما جعله مدخلًا أساسيًا لتعلم النحو وفهم قواعد اللغة العربية. وكتابي «فيض رب البرية في شرح المقدمة الآجرومية بالشواهد القرآنية »، وضعته
+                    لتيسير علم النحو للمبتدئين، فجاء شرحه مبسّطًا، واضحًا، مناسبًا لمن يبدأ طريقه في فهم العربية. وقد جعلت شواهده من القرآن الكريم وحده، ليبقى الدارس موصولًا بكلام الله عزَّ وجلَّ، ويستخرج قواعد العربية من منبعها الصافي، ومصدرها الأسمى، كتاب الله الذي نزل بلسانٍ
+                    عربي مبين.
+                  </p>
+                </div>
               </div>
-              <div class="bg-emerald-50 p-4 rounded-2xl shadow text-center">
-                <img src="https://placehold.co/400x550?text=Book+Cover" class="rounded-lg mx-auto mb-3 shadow-md" alt="book" />
-                <h4 class="font-bold text-lg text-emerald-700">الأسهم الذهبية</h4>
-                <p class="text-gray-700 text-sm">في تلخيص المقدمة الآجرومية بالشواهد القرآنية</p>
-                <p class="text-gray-700 text-sm">
-                  وكتابي «الأسهم الذهبية في تلخبص المقدمة الآجرومية» يقدِّم شرحًا معاصرًا لهذا المتن المبارك، بأسلوب بصريٍّ تعليميٍّ يجمع بين الأصالة والمنهجية الحديثة، ويقوم على تقسيم كل درس إلى صفحتين متقابلتين، تحتويان على المتن وشرحه معًا، مما يُبقي النص حاضرًا في ذهن الطالب
-                  أثناء التعلّم دون الحاجة إلى الرجوع لمصدر خارجي. وقد اعتُمد في الشرح على الخرائط الذهنية والأسهم التوضيحية، لما لها من أثر في تبسيط المفاهيم، وتسريع الحفظ، وتثبيت القواعد، وتمكين الطالب من مراجعتها برؤية شاملة وسريعة.
-                </p>
+
+              <!-- Book 2: الأسهم الذهبية -->
+              <div class="flex gap-4 bg-emerald-50 p-4 rounded-xl">
+                <div class="book-cover w-32 flex-shrink-0 rounded-lg shadow-md" style="background-image: url('./assets/02.jpg')"></div>
+                <div class="flex-1 text-right">
+                  <h4 class="font-bold text-lg text-emerald-700 mb-1">الأسهم الذهبية</h4>
+                  <p class="text-emerald-600 text-sm font-semibold mb-2">في تلخيص المقدمة الآجرومية بالشواهد القرآنية</p>
+                  <p class="text-gray-700 text-sm leading-relaxed">
+                    وكتابي «الأسهم الذهبية في تلخبص المقدمة الآجرومية» يقدِّم شرحًا معاصرًا لهذا المتن المبارك، بأسلوب بصريٍّ تعليميٍّ يجمع بين الأصالة والمنهجية الحديثة، ويقوم على تقسيم كل درس إلى صفحتين متقابلتين، تحتويان على المتن وشرحه معًا، مما يُبقي النص حاضرًا في ذهن
+                    الطالب أثناء التعلّم دون الحاجة إلى الرجوع لمصدر خارجي. وقد اعتُمد في الشرح على الخرائط الذهنية والأسهم التوضيحية، لما لها من أثر في تبسيط المفاهيم، وتسريع الحفظ، وتثبيت القواعد، وتمكين الطالب من مراجعتها برؤية شاملة وسريعة.
+                  </p>
+                </div>
               </div>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed">ابدأ بـ فيض رب البرية للفهم والتأمل، ثم انتقل إلى الأسهم الذهبية للمراجعة والإتقان، فتجمع بين البيان والاختصار، وبين الفهم الراسخ والمراجعة السريعة، في أولى خطواتك نحو العربية في رحاب القرآن الكريم.</p>
+            <p class="text-gray-600 text-sm leading-relaxed text-right bg-emerald-50 p-4 rounded-lg border-r-4 border-emerald-600">
+              ابدأ بـ فيض رب البرية للفهم والتأمل، ثم انتقل إلى الأسهم الذهبية للمراجعة والإتقان، فتجمع بين البيان والاختصار، وبين الفهم الراسخ والمراجعة السريعة، في أولى خطواتك نحو العربية في رحاب القرآن الكريم.
+            </p>
           </div>
 
-          <!-- Box 2: Last two books -->
+          <!-- Box 2: Tajweed Books -->
           <div class="bg-white border-2 border-emerald-100 p-6 rounded-2xl shadow-lg">
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div class="bg-emerald-50 p-4 rounded-2xl shadow text-center">
-                <img src="https://placehold.co/400x550?text=Book+Cover" class="rounded-lg mx-auto mb-3 shadow-md" alt="book" />
-                <h4 class="font-bold text-lg text-emerald-700">فيض الرحمن</h4>
-                <p class="text-gray-700 text-sm">بما في تحفة الأطفال من أحكام</p>
-                <p class="text-gray-700 text-sm">
-                  إلى الراغبين في حفظ كتاب الله عزَّ وجلَّ وتلاوته: نظم « تحفة الأطفال والغلمان في تجويد القرآن» للشيخ الجمزوري – رحمه الله تعالى – أحد أشهر المتون التي اعتمدها العلماء في تعليم التجويد للمبتدئين، يتكون من أبيات شعرية بيَّن فيها بعض أحكام التلاوة والتجويد، وهي: •
-                  أحكام النون الساكنة والتنوين. • أحكام الميم والنون المشددتين. • أحكام الميم الساكنة. • أحكام المتماثلين والمتجانسين والمتقاربين. • أحكام لام التعريف ولام الفعل. • أحكام المدود بأنواعها. وكتابي «فيض الرحمن بما في تحفة الأطفال من أحكام» اخترتُه لك؛ لأنه شرح ميسّر
-                  لمتن تحفة الأطفال، مع أمثلة وشواهد من جزء عمَّ؛ لتقريب الأحكام بأسلوب واضح يسهل فهمه وحفظه.
-                </p>
+            <div class="space-y-6 mb-6">
+              <!-- Book 3: فيض الرحمن -->
+              <div class="flex gap-4 bg-emerald-50 p-4 rounded-xl">
+                <div class="book-cover w-32 flex-shrink-0 rounded-lg shadow-md" style="background-image: url('./assets/03.jpg')"></div>
+                <div class="flex-1 text-right">
+                  <h4 class="font-bold text-lg text-emerald-700 mb-1">فيض الرحمن</h4>
+                  <p class="text-emerald-600 text-sm font-semibold mb-2">بما في تحفة الأطفال من أحكام</p>
+                  <div class="text-gray-700 text-sm leading-relaxed">
+                    <p class="mb-2">
+                      إلى الراغبين في حفظ كتاب الله عزَّ وجلَّ وتلاوته: نظم « تحفة الأطفال والغلمان في تجويد القرآن» للشيخ الجمزوري – رحمه الله تعالى – أحد أشهر المتون التي اعتمدها العلماء في تعليم التجويد للمبتدئين، يتكون من أبيات شعرية بيَّن فيها بعض أحكام التلاوة والتجويد،
+                      وهي:
+                    </p>
+                    <ul class="list-disc list-inside mr-4 mb-2 space-y-1">
+                      <li>أحكام النون الساكنة والتنوين</li>
+                      <li>أحكام الميم والنون المشددتين</li>
+                      <li>أحكام الميم الساكنة</li>
+                      <li>أحكام المتماثلين والمتجانسين والمتقاربين</li>
+                      <li>أحكام لام التعريف ولام الفعل</li>
+                      <li>أحكام المدود بأنواعها</li>
+                    </ul>
+                    <p>وكتابي «فيض الرحمن بما في تحفة الأطفال من أحكام» اخترتُه لك؛ لأنه شرح ميسّر لمتن تحفة الأطفال، مع أمثلة وشواهد من جزء عمَّ؛ لتقريب الأحكام بأسلوب واضح يسهل فهمه وحفظه.</p>
+                  </div>
+                </div>
               </div>
-              <div class="bg-emerald-50 p-4 rounded-2xl shadow text-center">
-                <img src="https://placehold.co/400x550?text=Book+Cover" class="rounded-lg mx-auto mb-3 shadow-md" alt="book" />
-                <h4 class="font-bold text-lg text-emerald-700">المختصر المفيد</h4>
-                <p class="text-gray-700 text-sm">في جداول التجويد</p>
-                <p class="text-gray-700 text-sm">
-                  بعد أن تتقن الفهم والتطبيق في “فيض الرحمن”، يأتي هذا الكتاب ليكون دليل المراجعة والتثبيت. اخترتبـ لك لأنه يقدّم أحكام التجويد بصورة مرتبة وواضحة في جداول مختصرة ومنظمة، لتراجع ما تعلمته بسهولة وتثبته في ذهنك، في أسلوب مبسّط يناسب المبتدئين.
-                </p>
+
+              <!-- Book 4: المختصر المفيد -->
+              <div class="flex gap-4 bg-emerald-50 p-4 rounded-xl">
+                <div class="book-cover w-32 flex-shrink-0 rounded-lg shadow-md" style="background-image: url('./assets/04.jpg')"></div>
+                <div class="flex-1 text-right">
+                  <h4 class="font-bold text-lg text-emerald-700 mb-1">المختصر المفيد</h4>
+                  <p class="text-emerald-600 text-sm font-semibold mb-2">في جداول التجويد</p>
+                  <p class="text-gray-700 text-sm leading-relaxed">
+                    بعد أن تتقن الفهم والتطبيق في "فيض الرحمن"، يأتي هذا الكتاب ليكون دليل المراجعة والتثبيت. اخترتبـ لك لأنه يقدّم أحكام التجويد بصورة مرتبة وواضحة في جداول مختصرة ومنظمة، لتراجع ما تعلمته بسهولة وتثبته في ذهنك، في أسلوب مبسّط يناسب المبتدئين.
+                  </p>
+                </div>
               </div>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed">ابدأ بـ فيض الرحمن للفهم والتطبيق، ثم انتقل إلى المختصر المفيد للمراجعة والتثبيت.</p>
+            <p class="text-gray-600 text-sm leading-relaxed text-right bg-emerald-50 p-4 rounded-lg border-r-4 border-emerald-600">ابدأ بـ فيض الرحمن للفهم والتطبيق، ثم انتقل إلى المختصر المفيد للمراجعة والتثبيت.</p>
           </div>
         </div>
 
-        <a href="#" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700">اشترِ الآن</a>
+        <div class="text-center">
+          <a href="#" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700">اشترِ الآن</a>
+        </div>
       </div>
 
       <!-- Level 2 -->
