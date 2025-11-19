@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Series in the Realm of Language, the Qur'an, and the Sunnah</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D6A4F',
+                        secondary: '#40916C',
+                        accent: '#95D5B2',
+                        dark: '#1B263B',
+                        light: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="text-3xl">🌿</div>
+                    <h1 class="text-xl md:text-2xl font-bold text-primary dark:text-accent font-serif">
+                        Language, Qur'an & Sunnah Series
+                    </h1>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <!-- Navigation Links -->
+                    <div class="hidden md:flex gap-6">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#levels" class="nav-link">Levels</a>
+                        <a href="#scholars" class="nav-link">Scholars</a>
+                        <a href="#approved" class="nav-link">Approved Books</a>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300">
+                        <svg id="sun-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg id="moon-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto fade-in">
+                <div class="mb-6 text-5xl animate-float">📖</div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 font-serif text-primary dark:text-accent slide-up">
+                    "Read in the name of your Lord who created."
+                </h2>
+                <p class="text-lg md:text-xl mb-4 text-gray-600 dark:text-gray-400 slide-up delay-100">
+                    [Al-'Alaq: 1]
+                </p>
+                <p class="text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300 slide-up delay-200 italic">
+                    🌿 A Series in the Realm of Language, the Qur'an, and the Sunnah
+                </p>
+                <p class="text-lg mb-12 text-gray-600 dark:text-gray-400 leading-relaxed slide-up delay-300">
+                    From the source of the two Revelations and their light, this educational series was launched to present Arabic from its authentic origin, bringing the sciences of grammar, tajwīd, and Qur'an recitation closer to learners in a method that combines authenticity and innovation.
+                </p>
+                <div class="flex gap-4 justify-center flex-wrap slide-up delay-400">
+                    <a href="#levels" class="btn-primary">
+                        Explore Levels
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-10 text-6xl opacity-10 animate-float">🌿</div>
+        <div class="absolute bottom-20 left-10 text-6xl opacity-10 animate-float delay-1000">📚</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title">What will you find in the series?</h2>
+                <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">📖</div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">Progressive Lessons</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Progressive lessons in grammar, tajwīd rulings, and Qur'an recitation.
+                    </p>
+                </div>
+
+                <div class="feature-card delay-100">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">Authentic Sources</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Qur'anic and Prophetic evidences that clarify the rule and connect knowledge to its authentic source.
+                    </p>
+                </div>
+
+                <div class="feature-card delay-200">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">Comprehensive Books</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Books dedicated to understanding and application, and others for review and reinforcement.
+                    </p>
+                </div>
+
+                <div class="feature-card delay-300">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">Visual Learning</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Tables and colors that help with easy memorization.
+                    </p>
+                </div>
+
+                <div class="feature-card delay-400">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">Sequential Levels</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Sequential levels from beginner to advanced.
+                    </p>
+                </div>
+
+                <div class="feature-card delay-500">
+                    <div class="text-4xl mb-4">✅</div>
+                    <h3 class="text-xl font-bold mb-3 text-primary dark:text-accent">Accredited Curriculum</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        An accredited curriculum suitable for schools, courses, and educational platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approved Books Section -->
+    <section id="approved" class="py-20 bg-gradient-to-br from-accent/10 to-secondary/10 dark:from-accent/5 dark:to-secondary/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title">Books Approved by the Egyptian Ministry of Education</h2>
+                <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600 dark:text-gray-400">
+                    The Libraries Department at the Egyptian Ministry of Education has approved several books from this series
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Primary Stage -->
+                <div class="approved-stage-card">
+                    <h3 class="text-2xl font-bold mb-4 text-primary dark:text-accent flex items-center gap-3">
+                        <span>📚</span>
+                        Primary Stage
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary dark:text-accent mt-1">✓</span>
+                            <span><strong>Read:</strong> How to Learn and Teach Reading through the Kuttāb System</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary dark:text-accent mt-1">✓</span>
+                            <span><strong>Fayd al-Raḥmān:</strong> On the Rulings Found in Tuḥfat al-Aṭfāl</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary dark:text-accent mt-1">✓</span>
+                            <span><strong>Let's Memorize the Qur'an:</strong> How to Read and Recite</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Preparatory Stage -->
+                <div class="approved-stage-card delay-100">
+                    <h3 class="text-2xl font-bold mb-4 text-primary dark:text-accent flex items-center gap-3">
+                        <span>📖</span>
+                        Preparatory Stage
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary dark:text-accent mt-1">✓</span>
+                            <span><strong>Al-Iʿlām bimā fī al-Muqaddimah al-Jazarīyah min Aḥkām</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary dark:text-accent mt-1">✓</span>
+                            <span><strong>Al-Hadiyyah fī al-Qawāʿid al-Naḥwiyyah bil-Shawāhid al-Qur'āniyyah</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Secondary Stage -->
+                <div class="approved-stage-card delay-200">
+                    <h3 class="text-2xl font-bold mb-4 text-primary dark:text-accent flex items-center gap-3">
+                        <span>🎓</span>
+                        Secondary Stage
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary dark:text-accent mt-1">✓</span>
+                            <span><strong>Al-Hadiyyah fī al-Qawāʿid al-Naḥwiyyah bil-Shawāhid al-Qur'āniyyah</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholars Section -->
+    <section id="scholars" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title">Scholars' and Experts' Evaluations</h2>
+                <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600 dark:text-gray-400">
+                    Several scholars of language and Qur'anic recitation have written introductions for some books in this series and praised its methodology and style
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="scholar-card">
+                    <div class="text-4xl mb-4">👤</div>
+                    <h4 class="font-bold text-lg mb-2">Prof. Dr. Hassan Al-Shāfiʿī</h4>
+                    <p class="text-gray-600 dark:text-gray-400">President of the Arabic Language Academy, Cairo</p>
+                </div>
+
+                <div class="scholar-card delay-100">
+                    <div class="text-4xl mb-4">👤</div>
+                    <h4 class="font-bold text-lg mb-2">Prof. Dr. Mahmoud Lāshīn</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Former scholar at Al-Azhar University</p>
+                </div>
+
+                <div class="scholar-card delay-200">
+                    <div class="text-4xl mb-4">👤</div>
+                    <h4 class="font-bold text-lg mb-2">Dr. ʿAbd al-Ghanī ʿAbd al-Jalīl al-ʿAryān</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Scholar and Researcher</p>
+                </div>
+
+                <div class="scholar-card delay-300">
+                    <div class="text-4xl mb-4">👤</div>
+                    <h4 class="font-bold text-lg mb-2">Dr. Fatḥī Anwar al-Dābūlī</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Professor and Head of the Arabic Department at Al-Azhar University</p>
+                </div>
+
+                <div class="scholar-card delay-400">
+                    <div class="text-4xl mb-4">👤</div>
+                    <h4 class="font-bold text-lg mb-2">Shaykh ʿAbd al-Ḥakīm ʿAbd al-Laṭīf</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Former Chief Reciter of Egypt and former head of the Al-Azhar Mosque recitation board</p>
+                </div>
+
+                <div class="scholar-card delay-500">
+                    <div class="text-4xl mb-4">👤</div>
+                    <h4 class="font-bold text-lg mb-2">Shaykh Muḥammad ʿAbd al-Ḥamīd Aḥmad Abū Rawāsh</h4>
+                    <p class="text-gray-600 dark:text-gray-400">Director of Qur'anic Text Supervision, King Fahd Complex, Madinah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Levels Overview -->
+    <section id="levels" class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title">Levels of the Educational Series</h2>
+                <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Determine your level and choose the books suitable for you. Whether you are a beginner, a student of knowledge, a preacher, a khatīb, or a researcher, the series offers a complete educational journey from beginner to advanced level.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="level-card">
+                    <div class="text-5xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Preparatory Reading & Tajwīd</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        For children and adults learning reading and tajwīd
+                    </p>
+                </div>
+
+                <div class="level-card delay-100">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Preparatory Grammar Level</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        For children and youth – stories and educational tales
+                    </p>
+                </div>
+
+                <div class="level-card delay-200">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Beginner Grammar Level</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Starting your journey with Arabic grammar fundamentals
+                    </p>
+                </div>
+
+                <div class="level-card delay-300">
+                    <div class="text-5xl mb-4">📖</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Beginner Tajwīd Level</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        For those wishing to memorize and recite the Book of Allah
+                    </p>
+                </div>
+
+                <div class="level-card delay-400">
+                    <div class="text-5xl mb-4">📘</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Intermediate Grammar Level</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Deepening your understanding of Arabic grammar
+                    </p>
+                </div>
+
+                <div class="level-card delay-500">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Advanced Tajwīd Level</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Advanced tajwīd rules and Jazariyyah explanation
+                    </p>
+                </div>
+
+                <div class="level-card delay-500">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-bold mb-3 text-primary dark:text-accent">Advanced Grammar Level</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Grammar from Qur'an and Prophetic Hadith
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparatory Reading & Tajwid Level Details -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">📘 Preparatory Level for Learning Reading and Tajwīd</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                    <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+                        🌿 An enjoyable journey with the Noble Qur'an
+                    </p>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">
+                        For Children and Adults
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Book 1: Read -->
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/2D6A4F/FFFFFF?text=Read:+Kuttab+System" alt="Read Book" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📖 "Read"
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            How to Learn and Teach Reading through the Kuttāb System
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            🌿 A journey with letters and words
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p class="flex items-start gap-2">
+                                <span class="text-secondary dark:text-accent">✓</span>
+                                <span>Combines the warmth of the past with the effectiveness of the present</span>
+                            </p>
+                            <p class="flex items-start gap-2">
+                                <span class="text-secondary dark:text-accent">✓</span>
+                                <span>A practical method that returns the learner to the origins of the letters</span>
+                            </p>
+                            <p class="flex items-start gap-2">
+                                <span class="text-secondary dark:text-accent">✓</span>
+                                <span>Officially approved by the Egyptian Ministry of Education</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Book 2: Let's Memorize the Qur'an -->
+                    <div class="book-card delay-100">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/40916C/FFFFFF?text=Memorize+Quran" alt="Let's Memorize the Qur'an" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📖 "Let's Memorize the Qur'an"
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            How to Read and Recite
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            🌿 A progressive journey in reading and tajwīd
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p class="flex items-start gap-2">
+                                <span class="text-secondary dark:text-accent">✓</span>
+                                <span>Six practical lessons linking reading, writing, and tajwīd rules</span>
+                            </p>
+                            <p class="flex items-start gap-2">
+                                <span class="text-secondary dark:text-accent">✓</span>
+                                <span>Practical exercises on nūn & mīm sākinah, shaddah, elongation</span>
+                            </p>
+                            <p class="flex items-start gap-2">
+                                <span class="text-secondary dark:text-accent">✓</span>
+                                <span>Officially approved by the Egyptian Ministry of Education</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparatory Grammar Level Details -->
+    <section class="py-20 bg-gradient-to-br from-accent/10 to-secondary/10 dark:from-accent/5 dark:to-secondary/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">📘 Preparatory Grammar Level for Children and Youth</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                    <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+                        🌿 Stories and Tales in Grammar
+                    </p>
+                </div>
+
+                <div class="book-card-large">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="book-image">
+                            <img src="https://placehold.co/400x500/2D6A4F/FFFFFF?text=Grammar+Stories" alt="Stories and Tales in Grammar" class="w-full h-80 object-cover rounded-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-primary dark:text-accent font-serif">
+                                Stories and Tales in Grammar for Boys and Girls
+                            </h3>
+                            <p class="text-lg mb-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+                                An enjoyable journey into the world of grammar, where the dry lesson transforms into an engaging story, a prophetic situation, and an educational chant.
+                            </p>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2 text-primary dark:text-accent">🌼 What does our book contain?</h4>
+                                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-secondary dark:text-accent">•</span>
+                                            <span>Biography and stories from the Prophet's ﷺ life and battles</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-secondary dark:text-accent">•</span>
+                                            <span>Stories of the prophets and pillars of Islam</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-secondary dark:text-accent">•</span>
+                                            <span>Poems by Ahmad Shawqi and educational chants</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-secondary/10 dark:bg-secondary/20 p-4 rounded-lg">
+                                    <h4 class="font-bold mb-2">✨ Why is our book unique?</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        It combines grammar, education, biography, fun, and poetry — turning learning into a beloved planting of language, faith, and beauty in the hearts of children.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beginner Grammar Level -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">🎯 Beginner Level in Grammar</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400">
+                        Learn the language of the Qur'an with ease and clarity
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Book 1 -->
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/2D6A4F/FFFFFF?text=Fayd+Rabb+al-Bariyah" alt="Fayd Rabb al-Bariyah" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📗 Fayḍ Rabb al-Barīyah
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            Explanation of al-Ājurrūmiyyah with Qur'anic Evidences
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>A simplified explanation using Qur'anic examples only, keeping the learner connected to the speech of Allah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card delay-100">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/40916C/FFFFFF?text=Al-Ashum+al-Dhahabiyyah" alt="Al-Ashum al-Dhahabiyyah" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📘 Al-Ashum al-Dhahabiyyah
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            Summary of al-Ājurrūmiyyah with Qur'anic Evidences
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>Your companion for review and mastery, with rules in concise tables and mirrored pages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        Begin with <strong>Fayḍ Rabb al-Barīyah</strong> for understanding and reflection, then move to <strong>Al-Ashum al-Dhahabiyyah</strong> for review and mastery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intermediate Grammar Level -->
+    <section class="py-20 bg-gradient-to-br from-accent/10 to-secondary/10 dark:from-accent/5 dark:to-secondary/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">🎯 Intermediate Level in Grammar</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                </div>
+
+                <div class="book-card-large">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="book-image">
+                            <img src="https://placehold.co/400x500/2D6A4F/FFFFFF?text=Al-Hadiyyah" alt="Al-Hadiyyah" class="w-full h-80 object-cover rounded-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-primary dark:text-accent font-serif">
+                                📘 Al-Hadiyyah fī al-Qawāʿid al-Naḥwiyyah bil-Shawāhid al-Qur'āniyyah
+                            </h3>
+                            <p class="text-lg mb-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+                                Arabic is the noblest and most beneficial of languages for humanity, and it suffices it as an honor that the Qur'an was revealed in it.
+                            </p>
+
+                            <div class="space-y-4">
+                                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                    <h4 class="font-bold text-lg mb-2 text-primary dark:text-accent">Why rely on the language of the Qur'an?</h4>
+                                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-secondary dark:text-accent">•</span>
+                                            <span>The Qur'an is the only Arabic text recited correctly through direct oral transmission back to the Prophet ﷺ</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-secondary dark:text-accent">•</span>
+                                            <span>Teaching through a sacred text is better than other texts</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-secondary dark:text-accent">•</span>
+                                            <span>Every letter earns ten good deeds — learning and worship simultaneously</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-secondary/10 dark:bg-secondary/20 p-4 rounded-lg">
+                                    <p class="font-bold text-primary dark:text-accent">✅ Approved by the Egyptian Ministry of Education</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">For preparatory and secondary stages</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beginner Tajweed Level -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">🎯 Beginner Level in Tajwīd</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400">
+                        For those wishing to memorize and recite the Book of Allah
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Book 1 -->
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/2D6A4F/FFFFFF?text=Fayd+al-Rahman" alt="Fayd al-Rahman" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📗 Fayḍ al-Raḥmān
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            bimā fī Tuḥfat al-Aṭfāl min Aḥkām
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>A simplified explanation of the poem "Tuḥfat al-Aṭfāl wal-Ghilmān fī Tajwīd al-Qur'ān"</p>
+                            <ul class="mt-4 space-y-1 text-sm">
+                                <li>• Rules of nūn sākinah and tanwīn</li>
+                                <li>• Rules of doubled mīm and nūn</li>
+                                <li>• Types of elongation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card delay-100">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/40916C/FFFFFF?text=Al-Mukhtasar+al-Mufid" alt="Al-Mukhtasar al-Mufid" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📘 Al-Mukhtaṣar al-Mufīd
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            fī Jawādil al-Tajwīd
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>Your guide for review and reinforcement with tajwīd rules in concise tables</p>
+                            <ul class="mt-4 space-y-1 text-sm">
+                                <li>• Articulation points and characteristics</li>
+                                <li>• Tafkhīm and tarqīq</li>
+                                <li>• Stopping and starting rules</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        Begin with <strong>Fayḍ al-Raḥmān</strong> for understanding and application, then move to <strong>Al-Mukhtaṣar al-Mufīd</strong> for review and consolidation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Tajweed Level -->
+    <section class="py-20 bg-gradient-to-br from-accent/10 to-secondary/10 dark:from-accent/5 dark:to-secondary/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">🎯 Advanced Level in Tajwīd</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Book 1 -->
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/2D6A4F/FFFFFF?text=Al-I'lam" alt="Al-I'lam" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📗 Al-Iʿlām
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            bimā fī al-Muqaddimah al-Jazarīyah min Aḥkām
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>A detailed explanation of the Jazariyyah poem with examples from frequently recited sūrahs</p>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card delay-100">
+                        <div class="book-image">
+                            <img src="https://placehold.co/300x400/40916C/FFFFFF?text=Al-Mukhtasar+al-Mufid" alt="Al-Mukhtasar al-Mufid" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold mt-4 mb-3 text-primary dark:text-accent">
+                            📘 Al-Mukhtaṣar al-Mufīd
+                        </h3>
+                        <p class="text-lg mb-4 text-gray-700 dark:text-gray-300">
+                            fī Jawādil al-Tajwīd
+                        </p>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>A concise summary in nine organized sheets for quick and clear review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        Begin with <strong>Al-Iʿlām</strong> for detailed understanding, then proceed to <strong>Al-Mukhtaṣar al-Mufīd</strong> for review and mastery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Grammar Level -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="section-title">🎯 Advanced Level in Grammar</h2>
+                    <div class="w-20 h-1 bg-primary dark:bg-accent mx-auto mt-4"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400">
+                        Combining the Qur'an and the Sunnah
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Book 1 -->
+                    <div class="book-card-large">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="book-image">
+                                <img src="https://placehold.co/400x500/2D6A4F/FFFFFF?text=Al-Hadiyyah" alt="Al-Hadiyyah" class="w-full h-80 object-cover rounded-lg">
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4 text-primary dark:text-accent font-serif">
+                                    📘 Al-Hadiyyah fī al-Qawāʿid al-Naḥwiyyah
+                                </h3>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Simplified grammar rules in tables that link each rule to Qur'anic examples, making review and mastery easy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card-large delay-100">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4 text-primary dark:text-accent font-serif">
+                                    📗 Grammar for Beginners from the Speech of the Messenger ﷺ
+                                </h3>
+                                <p class="text-lg mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    This book is not just grammar; it is a nurturing journey through the gardens of Prophetic hadith.
+                                </p>
+
+                                <div class="bg-secondary/10 dark:bg-secondary/20 p-4 rounded-lg">
+                                    <h4 class="font-bold mb-2">🌼 Seven Parts:</h4>
+                                    <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                                        <li>1. Nominal sentence: subject & predicate</li>
+                                        <li>2. Grammatical operators: kāna, inna, and their sisters</li>
+                                        <li>3. Verbal sentence: the three verbs and the subject</li>
+                                        <li>4. The five objects</li>
+                                        <li>5. The accusatives: ḥāl, exception, specification</li>
+                                        <li>6. Dependents: adjective, conjunction, apposition</li>
+                                        <li>7. Conclusion: pronouns, prepositions, diptotes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-image">
+                                <img src="https://placehold.co/400x500/40916C/FFFFFF?text=Grammar+from+Hadith" alt="Grammar from Hadith" class="w-full h-80 object-cover rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 p-8 rounded-lg text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-primary dark:text-accent">✨ Features of the Advanced Level</h4>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                        With these two books, you begin with Al-Hadiyyah for review and application, then continue your journey through Grammar for Beginners from the Speech of the Messenger ﷺ, combining the two Revelations — Qur'an and Sunnah — making grammar alive in your mind and connected to both sources.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-gray-950 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <div class="text-4xl">🌿</div>
+                    <h3 class="text-2xl font-bold font-serif">A Series in the Realm of Language, the Qur'an, and the Sunnah</h3>
+                </div>
+
+                <p class="text-accent mb-6 max-w-2xl mx-auto">
+                    A journey through the realms of language, the Qur'an, and the Sunnah, connecting the reader to the Book of Allah and the Sunnah of His Prophet ﷺ, and planting the love of Arabic in the heart so one may live its beauty and be guided by its light.
+                </p>
+
+                <div class="border-t border-accent/30 pt-6 mt-6">
+                    <p class="text-sm text-accent/80">
+                        © 2025 All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
