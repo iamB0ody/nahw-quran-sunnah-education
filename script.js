@@ -1,71 +1,4 @@
-// Language Toggle Functionality
-const langToggle = document.getElementById("lang-toggle")
-const html = document.documentElement
-let translations = {}
-let currentLang = localStorage.getItem("lang") || "ar" // Default to Arabic
-
-// Load translations from JSON files
-async function loadTranslations(lang) {
-  try {
-    const response = await fetch(`/translations/${lang}.json`)
-    if (!response.ok) {
-      throw new Error(`Failed to load translations for ${lang}`)
-    }
-    return await response.json()
-  } catch (error) {
-    console.error("Error loading translations:", error)
-    return null
-  }
-}
-
-// Apply translations to elements with data-i18n attributes
-function applyTranslations(translations) {
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n")
-    const translation = getNestedTranslation(translations, key)
-    if (translation) {
-      element.textContent = translation
-    }
-  })
-}
-
-// Helper function to get nested translation value
-function getNestedTranslation(obj, path) {
-  return path.split(".").reduce((current, key) => current?.[key], obj)
-}
-
-// Switch language
-async function switchLanguage(lang) {
-  const newTranslations = await loadTranslations(lang)
-  if (newTranslations) {
-    translations = newTranslations
-    currentLang = lang
-
-    // Update HTML attributes
-    html.setAttribute("lang", lang)
-    html.setAttribute("dir", lang === "ar" ? "rtl" : "ltr")
-
-    // Apply translations
-    applyTranslations(translations)
-
-    // Save preference
-    localStorage.setItem("lang", lang)
-
-    // Update toggle button text
-    langToggle.textContent = lang === "ar" ? "EN" : "AR"
-  }
-}
-
-// Initialize language on page load
-switchLanguage(currentLang)
-
-// Language toggle event listener
-langToggle.addEventListener("click", () => {
-  const newLang = currentLang === "ar" ? "en" : "ar"
-  switchLanguage(newLang)
-})
-
-// Theme Toggle Functionality
+const html = document.documentElement // Theme Toggle Functionality
 const themeToggle = document.getElementById("theme-toggle")
 const sunIcon = document.getElementById("sun-icon")
 const moonIcon = document.getElementById("moon-icon")
@@ -148,7 +81,7 @@ const animateOnScroll = () => {
 
   elements.forEach((element, index) => {
     // element.dataset.delay = index * 50
-    element.dataset.delay = 500
+    element.dataset.delay = 250
     observer.observe(element)
   })
 }
