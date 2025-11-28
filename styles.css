@@ -215,12 +215,18 @@ body {
     box-shadow: 0 12px 35px rgba(45, 106, 79, 0.2);
 }
 
+.book-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
 .book-image img {
     transition: transform 0.3s ease;
 }
 
-.book-card:hover .book-image img,
-.book-card-large:hover .book-image img {
+.book-card:hover .book-image img:last-child,
+.book-card-large:hover .book-image img:last-child {
     transform: scale(1.05);
 }
 
